@@ -6,7 +6,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-import joblib # Used for saving the model and vectorizer
+import joblib 
 
 print("--- Training script started ---")
 
@@ -14,7 +14,6 @@ print("--- Training script started ---")
 df = pd.read_csv('data/IMDB Dataset.csv')
 
 # --- 2. Preprocessing ---
-# The same preprocess_text function from before
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
@@ -32,11 +31,10 @@ print("Preprocessing complete.")
 
 
 # --- 3. Feature Extraction & Label Encoding ---
-# We don't need to encode labels here as the model only needs the text features
 print("Vectorizing text...")
 tfidf = TfidfVectorizer(max_features=5000)
 X = tfidf.fit_transform(df['cleaned_review'])
-y = df['sentiment'] # Use the original text labels for training
+y = df['sentiment']
 print("Vectorization complete.")
 
 

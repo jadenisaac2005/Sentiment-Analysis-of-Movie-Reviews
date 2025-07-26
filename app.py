@@ -5,6 +5,21 @@ from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
+import nltk # Import NLTK library
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except nltk.downloader.DownloadError:
+    nltk.download('punkt')
+try:
+    nltk.data.find('corpora/stopwords')
+except nltk.downloader.DownloadError:
+    nltk.download('stopwords')
+try:
+    nltk.data.find('corpora/wordnet')
+except nltk.downloader.DownloadError:
+    nltk.download('wordnet')
+
 
 # --- 1. Load the saved model and vectorizer ---
 try:
@@ -16,7 +31,6 @@ except FileNotFoundError:
 
 
 # --- 2. Re-create the preprocessing function ---
-# This must be the EXACT same function used during training
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
@@ -64,4 +78,4 @@ if st.button("Analyze Sentiment"):
         st.warning("Please enter a review to analyze.")
 
 st.markdown("---")
-st.write("Built by - Jaden Isaac")
+st.write("Built by a B.Tech AI & ML Student")
