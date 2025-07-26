@@ -7,18 +7,22 @@ from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import nltk # Import NLTK library
 
-try:
-    nltk.data.find('tokenizers/punkt')
-except nltk.downloader.DownloadError:
-    nltk.download('punkt')
-try:
-    nltk.data.find('corpora/stopwords')
-except nltk.downloader.DownloadError:
-    nltk.download('stopwords')
-try:
-    nltk.data.find('corpora/wordnet')
-except nltk.downloader.DownloadError:
-    nltk.download('wordnet')
+# --- Download NLTK data ---
+def download_nltk_data():
+    try:
+        nltk.data.find('tokenizers/punkt')
+    except LookupError:
+        nltk.download('punkt')
+    try:
+        nltk.data.find('corpora/stopwords')
+    except LookupError:
+        nltk.download('stopwords')
+    try:
+        nltk.data.find('corpora/wordnet')
+    except LookupError:
+        nltk.download('wordnet')
+
+download_nltk_data()
 
 
 # --- 1. Load the saved model and vectorizer ---
@@ -52,10 +56,8 @@ st.write(
     "whether the sentiment is **Positive** or **Negative**."
 )
 
-# Text area for user input
 user_input = st.text_area("Enter your review here:", height=150)
 
-# Analyze button
 if st.button("Analyze Sentiment"):
     if user_input:
         # 1. Preprocess the user's input
