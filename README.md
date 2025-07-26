@@ -2,8 +2,7 @@
 
 A simple yet powerful web application that analyzes the sentiment of a movie review (Positive or Negative) using a machine learning model trained on the IMDb dataset. This project serves as a hands-on introduction to the end-to-end NLP project lifecycle, from data preprocessing to model deployment with a user-friendly interface.
 
-![App Screenshot](https://placehold.co/800x450/2d3748/ffffff?text=App+Screenshot+Here)
-*Note: Replace the URL above with a link to a screenshot of your running application.*
+![App Screenshot](https://i.postimg.cc/cCbZDwLZ/Screenshot-2025-07-27-at-1-30-38-AM.png)
 
 ---
 
@@ -123,5 +122,5 @@ Jaden Isaac – A B.Tech AI & ML student passionate about building useful projec
 
 Feel free to reach out with any questions or feedback!
 
-- **GitHub**: [github.com/YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- **LinkedIn**: [linkedin.com/in/YOUR_LINKEDIN](https://linkedin.com/in/YOUR_LINKEDIN)
+- **GitHub**: [github.com/jadenisaac2005](https://github.com/jadenisaac2005)
+- **LinkedIn**: [linkedin.com/in/jaden-isaac](https://linkedin.com/in/jaden-isaac)
