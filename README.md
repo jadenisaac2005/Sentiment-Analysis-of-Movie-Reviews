@@ -60,7 +60,7 @@ Make sure you have Python 3.8+ installed on your system.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/jadenisaac2005/Sentiment-Analysis-of-Movie-Reviews.git](https://github.com/YOUR_USERNAME/Sentiment-Analysis-of-Movie-Reviews.git)
+    git clone [https://github.com/YOUR_USERNAME/Sentiment-Analysis-of-Movie-Reviews.git](https://github.com/YOUR_USERNAME/Sentiment-Analysis-of-Movie-Reviews.git)
     cd Sentiment-Analysis-of-Movie-Reviews
     ```
 
