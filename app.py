@@ -9,18 +9,17 @@ import nltk # Import NLTK library
 
 # --- Download NLTK data ---
 def download_nltk_data():
-    try:
-        nltk.data.find('tokenizers/punkt')
-    except LookupError:
-        nltk.download('punkt')
-    try:
-        nltk.data.find('corpora/stopwords')
-    except LookupError:
-        nltk.download('stopwords')
-    try:
-        nltk.data.find('corpora/wordnet')
-    except LookupError:
-        nltk.download('wordnet')
+    packages = {
+        'tokenizers/punkt': 'punkt',
+        'corpora/stopwords': 'stopwords',
+        'corpora/wordnet': 'wordnet',
+        'tokenizers/punkt_tab': 'punkt_tab'  
+    }
+    for path, pkg_id in packages.items():
+        try:
+            nltk.data.find(path)
+        except LookupError:
+            nltk.download(pkg_id)
 
 download_nltk_data()
 
