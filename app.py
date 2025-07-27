@@ -13,7 +13,7 @@ def download_nltk_data():
         'tokenizers/punkt': 'punkt',
         'corpora/stopwords': 'stopwords',
         'corpora/wordnet': 'wordnet',
-        'tokenizers/punkt_tab': 'punkt_tab'  
+        'tokenizers/punkt_tab': 'punkt_tab'
     }
     for path, pkg_id in packages.items():
         try:
@@ -79,4 +79,4 @@ if st.button("Analyze Sentiment"):
         st.warning("Please enter a review to analyze.")
 
 st.markdown("---")
-st.write("Built by a B.Tech AI & ML Student")
+st.write("Built by - Jaden Isaac")
